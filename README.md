@@ -10,7 +10,7 @@ page 2 - Transactions list with pagination and sorting
 
  `https://ui-wallet-service-txho7xwdwq-el.a.run.app/`
 
-## prequistes
+## preRequistes
 
 - `install node v16.13.0 and angular cli`
 
