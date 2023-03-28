@@ -1,0 +1,73 @@
+.wallet-page {
+    font-size: 16px;;
+    margin-left: 20px;
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input {
+        display: block;
+        width: 30%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px #007bff;
+    }
+
+    button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
+.header-block {
+    padding-top:30px;
+    padding-bottom: 25px;
+    width : 30%;
+    display: inline-block;
+    .wallet-bance {
+        float: right;
+    }
+}
+.f-w-b {
+    font-weight: bold;
+}
+.p-t-25 {
+    padding-top: 25px;
+}
+a {
+    padding-top: 25px;
+    color: blue;
+    text-decoration: underline;
+}
+  
+a:hover {
+    color: purple;
+}
+.cursor {
+    cursor: pointer;
+}
+.p-t-15 {
+    padding-top: 15px;
+}
+.p-b-15 {
+    padding-bottom: 15px;
+}

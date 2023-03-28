@@ -1,27 +1,24 @@
-# UiWalletApp
+# UIWalletApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+Ui interfaces to save wallet and perform transactions on wallet
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Deployment
+- `gcloud auth login`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `docker build -t ui-wallet-app .`
 
-## Running end-to-end tests
+ docker run -p 4200:4200 ui-wallet-app
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `docker tag ui-wallet-app:latest gcr.io/original-voyage-381915/ui-wallet-service:1`
 
-## Further help
+- `docker push gcr.io/original-voyage-381915/ui-wallet-service:1` 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `gcloud run deploy ui-wallet-service --image gcr.io/original-voyage-381915/ui-wallet-service:1 --platform managed --region asia-south1 --project original-voyage-381915`

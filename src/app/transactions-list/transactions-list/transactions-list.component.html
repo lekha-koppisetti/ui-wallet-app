@@ -1,0 +1,43 @@
+<div class="trans-list-page" *ngIf="(transactions$ | async) as response">
+    <div *ngIf="response.transactions.length > 0">
+        <h2 class="p-t-15">Transaction History</h2>
+
+        <div class="sort-conatiner">
+            <select [(ngModel)]="selected" (change)="selectValue()">
+                <option [ngValue]="null">Sort By</option>
+                <option *ngFor="let cond of sortValues">{{cond}}</option>
+            </select>
+        </div>
+
+        <div class="trans-list">
+            <table mat-table [dataSource]="response.transactions" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef> Amount </th>
+                    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="balance">
+                    <th mat-header-cell *matHeaderCellDef> Balance </th>
+                    <td mat-cell *matCellDef="let element"> {{element.balance}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="createdAt">
+                    <th mat-header-cell *matHeaderCellDef> createdAt </th>
+                    <td mat-cell *matCellDef="let element"> {{element.createdAt | date: 'MMM d, y, h:mm:ss a'}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <mat-paginator [length]="total" [hidePageSize]="true" [pageSizeOptions]="[pageSize]"
+                [pageIndex]="currentPage" (page)="getTransactions($event)">
+            </mat-paginator>
+        </div>
+    </div>
+</div>
