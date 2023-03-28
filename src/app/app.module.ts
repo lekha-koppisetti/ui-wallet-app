@@ -11,10 +11,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { ToastrModule } from "ngx-toastr";
 import { NgToggleModule } from 'ng-toggle-button';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionsListComponent
+    TransactionsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,7 @@ import { NgToggleModule } from 'ng-toggle-button';
     ToastrModule.forRoot(),
     NgToggleModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

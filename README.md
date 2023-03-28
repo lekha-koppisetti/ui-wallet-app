@@ -2,20 +2,23 @@
 
 Ui interfaces to save wallet and perform transactions on wallet
 
-## Development server
+## prequistes
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- `install node v16.13.0`
 
-## Build
+- `npm i`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+-  `npm run build` to build the project
+
+- `npm to start` - starts server in http://localhost:4200/
+
 
 ## Deployment
 - `gcloud auth login`
 
 - `docker build -t ui-wallet-app .`
 
- docker run -p 4200:4200 ui-wallet-app
+- `docker run -p 4200:4200 ui-wallet-app`
 
 - `docker tag ui-wallet-app:latest gcr.io/original-voyage-381915/ui-wallet-service:1`
 
