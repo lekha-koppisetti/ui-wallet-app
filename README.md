@@ -2,9 +2,17 @@
 
 Ui interfaces to save wallet and perform transactions on wallet
 
+Page 1 - Form 1 to enter the details which will create the wallet and one another form to perform transactions
+
+page 2 - Transactions list with pagination and sorting
+
+## hostedUrl 
+
+ `https://ui-wallet-service-txho7xwdwq-el.a.run.app/`
+
 ## prequistes
 
-- `install node v16.13.0`
+- `install node v16.13.0 and angular cli`
 
 - `npm i`
 
@@ -12,6 +20,13 @@ Ui interfaces to save wallet and perform transactions on wallet
 
 - `npm to start` - starts server in http://localhost:4200/
 
+  or
+
+- ` Install Docker `
+
+- Run `docker build -t ui-wallet-app .`
+
+- RUN `docker run -p 4200:4200 ui-wallet-app`
 
 ## Deployment
 - `gcloud auth login`
