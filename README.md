@@ -10,7 +10,7 @@ page 2 - Transactions list with pagination and sorting
 
  `https://ui-wallet-service-txho7xwdwq-el.a.run.app/`
 
-## prequistes
+## preRequistes
 
 - `install node v16.13.0 and angular cli`
 
@@ -26,7 +26,7 @@ page 2 - Transactions list with pagination and sorting
 
 - Run `docker build -t ui-wallet-app .`
 
-- RUN `docker run -p 4200:4200 ui-wallet-app`
+- RUN `docker run -p 4200:4200 ui-wallet-app` to start server in http://localhost:4200/
 
 ## Deployment
 - `gcloud auth login`
