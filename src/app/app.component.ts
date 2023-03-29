@@ -84,7 +84,7 @@ export class AppComponent implements OnInit{
       });
       return;
     }
-    let transactionAmount = 0
+    let transactionAmount = this.transactionAmount;
     if(!this.config.value) {
       transactionAmount = this.transactionAmount * -1;
     }
