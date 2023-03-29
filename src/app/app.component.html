@@ -18,11 +18,15 @@
 
   <ng-template #showTransaction>
     <div class="header-block">
-      <span class="f-w-b">Enter Transaction</span>
-      <span class="wallet-bance" *ngIf="walletInfo && walletInfo.balance">
+      <div class="wallet" *ngIf="walletInfo">
+        <span class="f-w-b"> Wallet Name :</span>
+        <span>{{walletInfo.name}}</span>
+      </div>
+      <div class="wallet" *ngIf="walletInfo">
         <span class="f-w-b"> Wallet Balance :</span>
         <span>{{walletInfo.balance}}</span>
-      </span>
+      </div>
+      <div class="f-w-b p-t-15">Enter Transaction</div>
     </div>
 
     <div class="input">

@@ -84,11 +84,12 @@ export class AppComponent implements OnInit{
       });
       return;
     }
+    let transactionAmount = 0
     if(!this.config.value) {
-      this.transactionAmount = this.transactionAmount * -1;
+      transactionAmount = this.transactionAmount * -1;
     }
     let transactionObj: Transaction = {
-      amount: this.transactionAmount,
+      amount: transactionAmount,
       description: this.transactionDescription
     }
     this.transactionService.addTransaction(this.walletInfo.id, transactionObj)
